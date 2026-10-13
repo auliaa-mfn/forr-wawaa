@@ -1,0 +1,338 @@
+css
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --blue: #5798df;
+    --dark: #244c7b;
+    --light: #eaf5ff;
+    --pink: #e9b8d6;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    color: var(--dark);
+    background: #f7fbff;
+    overflow-x: hidden;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 17px 7%;
+    background: #ffffffed;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 3px 18px #518dcb18;
+}
+
+.logo {
+    color: var(--dark);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    color: var(--dark);
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: var(--blue);
+}
+
+section {
+    padding: 85px 8%;
+    scroll-margin-top: 75px;
+    text-align: center;
+}
+
+.hero {
+    position: relative;
+    min-height: 88vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(
+        145deg, #d3eaff, #fafdff, #c4e1ff
+    );
+}
+
+.hero h1,
+footer h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: clamp(38px, 7vw, 68px);
+    color: #4387cf;
+    margin: 15px 0;
+}
+
+h2 {
+    font-size: clamp(23px, 4vw, 34px);
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin: 15px 0;
+}
+
+.eyebrow {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #6095c8;
+    margin-bottom: 15px;
+}
+
+.sticker {
+    display: block;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.intro {
+    max-width: 570px;
+    line-height: 1.9;
+}
+
+.cloud {
+    position: absolute;
+    font-size: 85px;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.cloud1 {
+    top: 10%;
+    left: 3%;
+}
+
+.cloud2 {
+    right: 3%;
+    bottom: 10%;
+}
+
+.floating {
+    margin-top: 30px;
+    color: #5595d6;
+    font-size: 25px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.button {
+    display: inline-block;
+    border: none;
+    border-radius: 40px;
+    padding: 14px 25px;
+    margin-top: 25px;
+    background: var(--blue);
+    color: white;
+    font-family: inherit;
+    font-weight: 800;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 7px 18px #5798df35;
+    transition: 0.3s;
+}
+
+.button:hover {
+    transform: translateY(-4px);
+    background: #347bc0;
+}
+
+.letter {
+    max-width: 850px;
+    margin: auto;
+    padding: clamp(25px, 5vw, 50px);
+    border: 2px dashed #a9d0f6;
+    border-radius: 28px;
+    background: white;
+    box-shadow: 0 12px 35px #558dc51c;
+    text-align: left;
+    line-height: 2;
+}
+
+.letter h2,
+.letter h3 {
+    text-align: center;
+    color: #4387cf;
+}
+
+.letter p {
+    margin: 18px 0;
+}
+
+.blue {
+    background: linear-gradient(145deg, #e3f2ff, #f7fbff, #d6eaff);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 1050px;
+    margin: 35px auto 0;
+}
+
+.card {
+    padding: 28px 23px;
+    background: #ffffff;
+    border: 1px solid #d4e8fc;
+    border-radius: 25px;
+    box-shadow: 0 9px 25px #518dcb15;
+    transition: transform 0.3s;
+    text-align: left;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card > span {
+    font-size: 38px;
+}
+
+.card h3 {
+    color: #3e80c2;
+}
+
+.card p,
+.card li {
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.card ul {
+    padding-left: 18px;
+}
+
+.checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 22px;
+    background: white;
+    text-align: left;
+    box-shadow: 0 8px 25px #518dcb15;
+}
+
+.checklist label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    line-height: 1.6;
+}
+
+.checklist input {
+    width: 18px;
+    height: 18px;
+    accent-color: #5798df;
+}
+
+.small {
+    font-size: 12px;
+    color: #6488ab;
+}
+
+.surprise {
+    background: linear-gradient(135deg, #cfe6ff, #f6fbff);
+}
+
+#pesanSemangat {
+    max-width: 550px;
+    margin: 25px auto 0;
+    line-height: 2;
+    font-weight: 700;
+}
+
+footer {
+    padding: 90px 8%;
+    text-align: center;
+    background: linear-gradient(145deg, #d0e7ff, #f8fcff);
+}
+
+footer p {
+    max-width: 600px;
+    margin: 18px auto;
+    line-height: 1.9;
+}
+
+.signature {
+    color: #477fb6;
+}
+
+.heart {
+    position: fixed;
+    bottom: -40px;
+    z-index: 200;
+    pointer-events: none;
+    animation: terbang 3.5s linear forwards;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes terbang {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 760px) {
+    nav {
+        flex-direction: column;
+        padding: 15px 10px;
+    }
+
+    .menu {
+        justify-content: center;
+        gap: 13px;
+    }
+
+    .menu a {
+        font-size: 11px;
+    }
+
+    section {
+        padding: 65px 6%;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+    }
+
+    .hero {
+        min-height: 80vh;
+    }
+
+    .cloud {
+        font-size: 50px;
+    }
+}
